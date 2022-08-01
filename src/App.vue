@@ -34,19 +34,7 @@
     </v-navigation-drawer>
 
     <v-main>
-      <v-container fluid>
-        <v-layout align-center justify-center>
-          <v-flex xs10>
-            <v-card>
-              <v-card-text>
-                <v-layout row wrap>
-                  <!-- Insert your code here -->
-                </v-layout>
-              </v-card-text>
-            </v-card>
-          </v-flex>
-        </v-layout>
-      </v-container>
+      <PeopleList/>
     </v-main>
 
     <v-footer app :color="headerFooterColor" class="white--text" :inset="true">
@@ -56,7 +44,15 @@
 </template>
 
 <script>
+// import HelloWorld from './components/HelloWorld';
+import PeopleList from './components/PeopleList';
+
 export default {
+
+  components: {
+    // HelloWorld,
+    PeopleList
+  },
   data: () => ({
     headerFooterColor: "light-green lighten-2",
     drawer: null,

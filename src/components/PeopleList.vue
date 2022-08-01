@@ -1,0 +1,78 @@
+<template>
+  <v-container fluid>
+    <v-layout row>
+      <v-flex grow pa-1>
+        <v-card>
+          <v-list header>
+            <template v-for="(frnd, index) in friends">
+              <PersonItem
+                v-bind:key="frnd.id"
+                :friend="frnd"
+                :last="index === friends.length - 1"
+                @change-fav-friend="like"
+              />
+            </template>
+
+
+          </v-list>
+        </v-card>
+      </v-flex>
+      <v-flex shrink pa-1>
+        <v-btn color="success" dark large>Add Friend</v-btn>
+      </v-flex>
+    </v-layout>
+  </v-container>
+</template>
+
+<script>
+import PersonItem from "./PersonItem";
+
+export default {
+  data() {
+    return {
+      friends: [
+        {
+          id: 1,
+          firstName: "Michelle",
+          lastName: "Mulroy",
+          gender: "female",
+          fav: false
+        },
+        {
+          id: 2,
+          firstName: "Venkat",
+          lastName: "Subramanian",
+          gender: "male",
+          fav: false
+        },
+        {
+          id: 3,
+          firstName: "Matt",
+          lastName: "Forsythe",
+          gender: "none",
+          fav: false
+        },
+        {
+          id: 4,
+          firstName: "Nate",
+          lastName: "Schutta",
+          gender: "male",
+          fav: false
+        }
+      ]
+    };
+  },
+  methods: {
+    clicked(i) {
+      console.log(i);
+    },
+    like(frnd) {
+      console.log(frnd);
+      frnd.fav = !frnd.fav;
+    }
+  },
+  components: { PersonItem }
+};
+</script>
+
+<style></style>
