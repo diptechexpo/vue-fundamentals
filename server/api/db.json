@@ -12,7 +12,7 @@
       "firstName": "Venkat",
       "lastName": "Subramanian",
       "gender": "male",
-      "fav": true
+      "fav": false
     },
     {
       "id": 3,
