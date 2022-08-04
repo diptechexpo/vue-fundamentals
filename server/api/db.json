@@ -27,6 +27,20 @@
       "lastName": "Schutta",
       "gender": "male",
       "fav": false
+    },
+    {
+      "firstName": "D",
+      "lastName": "S",
+      "gender": "male",
+      "fav": true,
+      "id": 5
+    },
+    {
+      "firstName": "S",
+      "lastName": "S",
+      "gender": "female",
+      "fav": false,
+      "id": 6
     }
   ]
 }
