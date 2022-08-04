@@ -44,7 +44,7 @@
     </v-main>
 
     <v-footer app :color="headerFooterColor" class="white--text" :inset="true">
-      <span>Looselytyped &copy; 2019</span>
+      <span>Year 2022</span>
     </v-footer>
   </v-app>
 </template>
